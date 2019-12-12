@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cropper</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="dist/cropper.css">
+  <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+  <div class="upload_container">
+    <input type='file' id="fileUpload" accept="image/*" />
+    <img id="image" />
+  </div>
+  <!-- file upload -->
+
+  <div class="toolbar">
+    <button type="button" class="btn btn-primary" data-method="setDragMode" data-option="move" title="Move">
+      <span class="docs-tooltip" data-toggle="tooltip" data-animation="false"
+        title="$().cropper(&quot;setDragMode&quot;, &quot;move&quot;)">
+        <span class="fa fa-arrows-alt"></span>
+      </span>
+    </button>
+    <button type="button" class="btn btn-primary" data-method="setDragMode" data-option="crop" title="Crop">
+      <span class="docs-tooltip" data-toggle="tooltip" data-animation="false"
+        title="$().cropper(&quot;setDragMode&quot;, &quot;crop&quot;)">
+        <span class="fa fa-crop-alt"></span>
+      </span>
+    </button>
+    <button type="button" class="btn btn-primary" data-method="zoom" data-option="0.1" title="Zoom In">
+      <span class="docs-tooltip" data-toggle="tooltip" data-animation="false"
+        title="$().cropper(&quot;zoom&quot;, 0.1)">
+        <span class="fa fa-search-plus"></span>
+      </span>
+    </button>
+    <button type="button" class="btn btn-primary" data-method="zoom" data-option="-0.1" title="Zoom Out">
+      <span class="docs-tooltip" data-toggle="tooltip" data-animation="false"
+        title="$().cropper(&quot;zoom&quot;, -0.1)">
+        <span class="fa fa-search-minus"></span>
+      </span>
+    </button>
+    <button type="button" class="btn btn-primary" data-method="rotate" data-option="-45" title="Rotate Left">
+      <span class="docs-tooltip" data-toggle="tooltip" data-animation="false"
+        title="$().cropper(&quot;rotate&quot;, -45)">
+        <span class="fa fa-undo-alt"></span>
+      </span>
+    </button>
+    <button type="button" class="btn btn-primary" data-method="rotate" data-option="45" title="Rotate Right">
+      <span class="docs-tooltip" data-toggle="tooltip" data-animation="false"
+        title="$().cropper(&quot;rotate&quot;, 45)">
+        <span class="fa fa-redo-alt"></span>
+      </span>
+    </button>
+    <button type="button" class="btn btn-primary" data-method="scaleX" data-option="-1" title="Flip Horizontal">
+      <span class="docs-tooltip" data-toggle="tooltip" data-animation="false"
+        title="$().cropper(&quot;scaleX&quot;, -1)">
+        <span class="fa fa-arrows-alt-h"></span>
+      </span>
+    </button>
+    <button type="button" class="btn btn-primary" data-method="scaleY" data-option="-1" title="Flip Vertical">
+      <span class="docs-tooltip" data-toggle="tooltip" data-animation="false"
+        title="$().cropper(&quot;scaleY&quot;, -1)">
+        <span class="fa fa-arrows-alt-v"></span>
+      </span>
+    </button>
+  </div>
+  <!-- toolbar -->
+
+  <canvas id="canvas"></canvas>
+  <!-- canvas -->
+
+
+  <script type=" text/javascript" src="dist/cropper.js"></script>
+  <script type="text/javascript" src="src/index.js"></script>
+</body>
+
+</html>
